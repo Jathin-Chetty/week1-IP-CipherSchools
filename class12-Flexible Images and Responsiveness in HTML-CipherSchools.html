@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Images and Responsiveness in HTML</title>
+</head>
+<body>
+    <!-- to add image use the img tag.
+     src attribute specifies the location or source of the image.
+    alt attribute specifies the text that should be displayed if the image doesnt load. -->
+    <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="House" 
+    srcset="/assets/small.jpg 480w,
+             /assets/medium.jpg 800w,
+             /assets/large.jpg 1200w"
+     sizes="(max-width: 480px) 240px,
+             (max-width: 960px) 480px,
+             (max-width: 1440px) 960px"
+     >
+     <picture>
+        <source media="(max-width: 600px)" srcset="https://www.w3schools.com/html/pic_trulli.jpg">
+        <source media="(max-width: 900px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+        <img src="https://www.w3schools.com/html/img_food.jpg" alt="">
+    </picture>
+    
+     <!-- it is advised to use svg or webpeg images as they have less storage -->
+     
+</body>
+</html>
